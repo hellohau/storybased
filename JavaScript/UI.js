@@ -257,3 +257,14 @@ load_node(nodes_UI[0]);
 // add a front page for the stories
 // add login to create a story
 // add comments and reviews
+
+const fs = require('fs');
+
+const content = 'Some content!';
+
+fs.writeFile('test.txt', content, err => {
+  if (err) {
+    console.error(err);
+  }
+  // file written successfully
+});
