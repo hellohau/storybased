@@ -1,1 +1,41 @@
-<h1>Hello</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "Classes.js"></script>
+    <script defer src = "ContextMenu.js"></script>
+    <script defer src = "preface.js"></script>
+    <script defer src = "UI.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "preface">
+        <textarea id = "title" spellcheck="false">This is the node name</textarea>
+        <textarea id = "area" spellcheck="false">This is the node name</textarea>
+        <div id = "choices">
+            <button class = "choice">Search the house with her</button>
+            <button class = "choice">Leave the area and look for other people </button>
+            <button class = "choice">Choice number 3</button>
+            <button class = "choice">Choice number 4</button>
+        </div>
+    </div>
+
+    <canvas id = "canv" class = "hide" style = "border :1px solid black "></canvas>
+    
+    <div id = "context-menu">
+        <div class = "item" onclick = "add_node_UI()"> Add node </div>
+        <div class = "item" onclick = "remove_node_UI()"> Remove node </div>
+        <div class = "item" onclick = "draw_tree(current_tree)"> Reset positions </div>
+        <div class = "item" onclick = "add_connection()"> Connect to </div>
+    </div>
+
+    <div id = "switch_button" onclick = "swap_screen()">
+        <img src = "tree.png"></img>
+    </div>
+
+</body>
+</html>
