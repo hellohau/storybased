@@ -1,3 +1,151 @@
-h1{
-  color:yellow;
+@font-face {
+    font-family: SoleilFont;
+    src: url(fonts/SoleilLight.otf);
+  }
+
+*{
+    font-family:SoleilFont;
+}
+
+body{
+    margin : 0;
+    overflow-x: hidden;
+    display:block;
+}
+
+#context-menu{
+    position : absolute;
+    z-index : 10000;
+    width: 150px;
+    background : #1b1a1a;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin :top left;
+}
+
+#context-menu .item{
+    padding : 8px 10px;
+    font-size: 15px;
+    color : #eee;
+    cursor : pointer;
+    border-radius: inherit;
+}
+
+#context-menu .item:hover{
+    background: #343434;
+}
+
+#context-menu.visible{
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+}
+
+
+
+#canv{
+    top:0;
+    position:absolute;
+}
+
+#switch_button{
+    position:absolute;
+    top:0;
+    right:0;
+    margin: 25px;
+    /* background-color: none;
+    border : none; */
+    border-radius: 300px;
+    width : 50px;
+    height: 50px;
+    background: rgb(205, 205, 255);
+    border : 3px solid black;
+}
+
+#switch_button img{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px;
+    
+    width : 40px;
+    height: 40px;
+}
+
+textarea{
+    resize:none;
+    background: #f9f9f9;
+    color :black;
+    border-radius:10px;
+    padding:10px;
+
+    display: table;
+    margin: 0 auto;}
+
+
+#preface{
+    width:100%;
+    background-color: rgb(103, 103, 231);
+}
+
+#title{
+
+    width:50%;
+    height:30px;
+
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom:50px;
+
+    transform:translateY(25px);
+    border : 3px solid black;
+}
+
+#area{
+    width:70%;   
+    height:600px;
+
+    font-size: 20px;
+    
+    padding:50px;
+    border : 3px solid black;
+
+}
+
+#choices {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+
+    margin:50px 0px 50px 0px;
+}
+  
+/* #choices > button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+}
+
+#choices > button :hover {
+    background-color: rgba(255, 0, 0, 1);
+} */
+
+.choice{
+    /* background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black; */
+    padding:10px;
+    font-size: 20px;
+    border-radius:10px;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.hide{
+    display : none;
+    pointer-events: none;
+    z-index : -100;
 }
